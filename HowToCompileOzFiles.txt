@@ -1,0 +1,34 @@
+Compile: ozc -c oz_test.oz 
+Run: ozengine oz_test.ozf
+Example of OZ program: 
+
+	functor
+	import
+	    System
+	    Application
+	define
+	    {System.showInfo 'Hello World!'}
+	    {Application.exit 0}
+	end
+
+Another Example:
+
+	functor
+	import
+	    Browser 
+	    Application
+	define
+		local X in
+			local Y in
+				local Z in
+					X = person(name:"George" age:Y)
+					Z = 26
+					Z = Y
+					{Browser.browse Y}
+				end
+			end
+			{Browser.browse X}
+		end
+	end
+
+
